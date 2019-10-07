@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>금정구 문화관광</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="title" content="금정구 문화관광">
+    <meta name="keywords" content="금정구, 금정산, 산성마을, 부산 금정구">
+    <meta name="description" content="금정구 문화관광 사이트입니다">
+    <meta property="og:title" content="금정구 문화관광">
+    <meta property="og:description" content="금정구 문화관광">
+    <meta property="og:image" href="./data/image2.jpg">
+    <link rel="shortcut icon" type="image/png" href="./data/fvcon16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./data/fvcon32.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./data/fvcon180.png">
+    <style>
+    * { margin: 0; padding: 0; }
+    body, html { width: 100%; height: 100%;font-family: "malgun", sans-serif; }
+    ul { list-style: none;}
+    a { text-decoration: none; }
+    button, a, input { border:0; outline:0; }
+        .wrap { width: 100%; height: 100%; }
+        .page { clear: both; width: 100%; height: 100%; position: relative; }
+        .page_wrap { width: 1280px; margin:0 auto; }
+        #tnb { width: 100%; height: 42px; background:rgba(0,0,0,0.2); position:absolute; top: 0; left: 0; z-index:60; }
+        .right.menu { float:right; margin-right: 120px; }
+        #tnb li { float:left; margin-left:25px; }
+        #tnb li a { display:block; color:#fff; line-height: 42px; font-size:14px; }
+        .lst_btn { display:block; width: 48px; height: 48px;
+                    background-image:url("./data/menuwhite.png"); background-repeat: no-repeat; position:fixed; top:50px; left: 180px; z-index:90; text-indent: -9999px; cursor:pointer; }
+        #gnb { position:fixed; top:0; left:-250px; z-index:99; width: 240px; height:100%; 
+        background-color:rgba(255,255,255,0.8); transition:0.5s; }
+        #ck1:checked ~ #gnb { left: 0; }
+        #ck1 { display:none; }
+        .close_btn { display: block; background-position: -195px -147px; width: 48px; height: 48px; 
+        background-image: url("./data/close2.png"); text-indent:-9999px; margin: 14px; float: right; cursor: pointer; }
+        .main { clear: both; }
+        .main li { line-height: 46px; }
+        .main li a { display: block; padding-left:80px; color: #333; font-size: 20px; }
+        .bottom { margin-top: 120px; }
+        .bottom li { line-height: 32px; }
+        .bottom li a { display: block; padding-left:60px; color: #333; text-indent: 20px; }
+/*        메인페이지 콘텐츠 스타일*/
+        #vdo { width: 100%; height: 100%; }
+        #vd1 { display: block; width: 100%; min-height: 100%;}
+        #cover_page { position: absolute; width: 100%; height: 100%; z-index: 10; top: 0; left: 0; }
+        .tit { background-image:url("./data/mainlogo2.png"); width: 430px; height: 140px; margin:90px auto; margin-top: 200px; }
+        #frm1 { width: 800px; height: 80px; margin:0 auto; background-color:rgba(0,0,0,0.6); }
+        #keyword { display: block; height: 70px; width:700px; background-color:transparent; font-size:18px; text-indent:24px; margin: 5px; float: left; opacity: 0.6; transition: 0.5s; }
+        #search { display: block; width: 70px; height: 70px; float: right; margin: 5px;
+                background-color: #777; background-image:url("./data/searchwhite.png"); text-indent:-9999px;
+                background-size: 48px 48px; background-position:center center; 
+                background-repeat:no-repeat; opacity:0.6; transition:0.5s; }
+        #keyword:focus { opacity:1; background-color: #fff; }
+        #keyword:focus ~ #search { opacity:1; }
+        #page2, #page3 { background-image:url("./data/image3.jpg"); background-repeat: no-repeat; background-size:cover; }
+        #page2 { background-attachment: fixed; padding-top: 40px; }
+        #insight { background-color: #f0f0f0; height: 95%; }
+        .page_tit { text-align: center; line-height: 100px; font-size: 38px; color: #333; }
+        .thum_lst li { float: left; width: 373px; margin-left: 40px; position: relative; overflow:hidden; height:320px; margin-top: 40px; }
+        .thum_lst li.col8 { width: 760px; }
+        .thum_lst li a { color: #333; display: block; width: 360px;height: 300px; overflow: hidden; border:3px
+        solid transparent; margin: 7px auto; transition:0.8s; transition-delay:0.1s; background-color: #e1e1e1; }
+        .thum_lst li.col8 a { width: 770px; background-image:url("./data/image3.jpg"); background-size: cover; color: #fff; }
+        .thum_lst li a:hover { border:3px solid #467ccb; background-color: #fff; }
+        .cate_tit { padding: 14px; color: #467ccb; text-decoration: underline; }
+        .lst_tit { padding: 14px; font-size: 25px; }
+        .lst_com { padding: 14px; }
+        .lst_date { padding: 14px; position: absolute; bottom: 14px; left: 5px; }
+        .vs_con { padding-top: 50px; }
+        #vs { width: 100%; overflow-x:hidden; background-color:#f0f0f0; padding-top: 50px; position: relative; }
+        .img_box { width: 400%; }
+        .img_box li { float:left; width: 25%; }
+        .img_box li .pic { display: block; width: 580px; float: left; margin-left: 40px; margin-bottom: 40px; }
+        .img_box li .tit_box { width: 580px; float: right; margin-right: 40px; margin-bottom: 40px; }
+        .vs_tit { padding: 24px; }
+        .vs_com { padding: 24px; }
+        .more { display: block; width: 120px; height: 40px; border: 2px solid #333; color: #333; text-align: center; line-height: 40px; margin: 24px; }
+        .btn_box { position: absolute; right: 100px; bottom: 50px; z-index: 50; width: 500px; height: 14px; }
+        .btn_box li { width: 150px; margin-left: 12px; float: left; }
+        .btn_box li button { display: block; width: 150px; height: 14px; background-color:#666; }
+        .btn_box li.on button { background-color:#467ccb; }
+        .ico_link { clear: both; margin-top: 50px; width: 100%; height: 64px; background:#fff; }
+        .ico_link li { float: left; width: 50%; height: 64px; }
+        .ico_link li a { display: block; color: #333; font-size: 22px; line-height: 64px; text-align: center; background: #fff; padding-left: 100px; }
+        .ico_link li a.item2 { background:#f0f0f0; }
+        .ico_link li a span { display: block; float: left; padding-left: 15px; }
+        .ico_link li a .ico { background-repeat: no-repeat; background-image: url("./data/fvcon32.png"); margin-top: 5px; }
+        .ico_link li a.item1 .ico { background-position:0px -301px; width: 20px; height: 53px; }
+        .ico_link li a.item2 .ico { background-position:-40px -301px; width: 42px; height: 53px; }
+        #ft { height: 100px; background: #333; color:#f0f0f0; }
+        .fnb { float:left; margin-left: 20px; }
+        .fnb li { float:left; padding:10px; }  
+        .fnb li a { color:#868686; display:block; line-height:78px; } 
+        .fnb li a:after { content:"·"; padding-left: 20px; }  
+        .fnb li a.last:after { content:""; }
+        .copyright { float:right; line-height: 100px; padding-right: 24px; }
+        
+    #totop { position:fixed; right:60px; bottom:100px; z-index:999; 
+        display:block; width: 60px; height: 60px; text-align:center;
+        line-height: 60px; background:#f0f0f0; color:#333; 
+        border-radius:32px; box-shadow:0px 0px 12px #333; }    
+        
+        
+    </style>
+</head>
+<body>
+<div class="wrap">
+   <nav id="tnb">
+      <ul class="right menu">
+       <li><a href="http://art.geumjeong.go.kr/main.asp">문화회관</a></li>
+       <li><a href="http://tour.busan.go.kr/index.busan">문화관광</a></li>
+       <li><a href="https://its.busan.go.kr/index.do">교통정보</a></li>
+       </ul>
+   </nav>
+   <input type="checkbox" id="ck1">
+   <label for="ck1" class="lst_btn">열기</label>
+   <nav id="gnb">
+        <label for="ck1" class="close_btn">닫기</label>
+       <ul class="main">
+           <li><a href="">관광명소</a></li>
+           <li><a href="">추천여행</a></li>
+           <li><a href="">관광안내</a></li>
+           <li><a href="">축제행사</a></li>
+       </ul>
+       <ul class="bottom">
+           <li><a href="http://art.geumjeong.go.kr/main.asp">문화회관</a></li>
+           <li><a href="http://tour.busan.go.kr/index.busan">문화관광</a></li>
+           <li><a href="https://its.busan.go.kr/index.do">교통정보</a></li>
+       </ul>
+   </nav>
+    <div class="page" id="page1">
+        <figure id="vdo">
+            <video src="./data/mainvideo.mp4" id="vd1" muted autoplay loop></video>
+        </figure>
+        <section class="page_wrap" id="cover_page">
+            <h2 class="tit"></h2>
+            <form action="" id="frm1"><input type="text" id="keyword"><input type="submit" id="search"></form>
+        </section>
+    </div>
+    <div class="page" id="page2">
+        <section class="page_wrap" id="insight">
+            <h2 class="page_tit">BEST PLACE</h2>
+            <ul class="thum_lst">
+                <li class="col4"><a href="">
+                        <h4 class="cate_tit">금정구 명소</h4>
+                        <h3 class="lst_tit">회동수원지</h3>
+                        <p class="lst_com">부산시민의 중요한 식수원이자 휴양처로 이름이 알려져 있으며 이 곳의 아름다운 경치를 오륜대라고 불렀다.</p>
+                        <span class="lst_date">2019.09.09</span>
+                    </a></li>
+                <li class="col4"><a href="">
+                        <h4 class="cate_tit">금정구 명소</h4>
+                        <h3 class="lst_tit">요산문학관</h3>
+                        <p class="lst_com">요산 김정한 선생(1908~1996)을 기념하고 그의 문학을 기리며 이를 통해 시민정신을 고양하기 위해 건립한 문화공간</p>
+                        <span class="lst_date">2019.09.09</span>
+                    </a></li>
+                <li class="col4"><a href="">
+                        <h4 class="cate_tit">금정구 명소</h4>
+                        <h3 class="lst_tit">범어사</h3>
+                        <p class="lst_com">합천 해인사, 양산 통도사와 더불어 남도 3대 사찰로한국 불교계의 중심지 중 하나
+</p>
+                        <span class="lst_date">2019.09.09</span>
+                    </a></li>
+                <li class="col4"><a href="">
+                        <h4 class="cate_tit">금정구 명소</h4>
+                        <h3 class="lst_tit">연꽃소류지</h3>
+                        <p class="lst_com">한 주민이 연꽃 씨앗을 파종한 이후 자연적으로 번식되어 현재의 연꽃소류지가 탄생</p>
+                        <span class="lst_date">2019.09.09</span>
+                    </a></li>
+                <li class="col8">
+                   <a href="">
+                        <h4 class="cate_tit">금정구 명소</h4>
+                        <h3 class="lst_tit">금정산</h3>
+                        <p class="lst_com">한반도에서 햇살이 가장 먼저 비친다는 금정산은 골짜기마다 울창한 숲과 맑은 물이 항상 흘러내리고 화강암의 기암절병이 절묘한 산세를 일구어 마치 아름다운 수묵화를 펼쳐놓은 듯한 부산의 진산이다.</p>
+                        <span class="lst_date">2019.09.09</span>
+                    </a></li>
+            </ul>
+        </section>
+    </div>
+    <div class="page" id="page3">
+        <section class="page_wrap" id="vs_con">
+            <figure id="vs">
+                <ul class="img_box">
+                    <li>
+                        <img src="./data/mainslide1.jpg" alt="슬라이드1" class="pic">
+                        <div class="tit_box">
+                            <h3 class="vs_tit">금정구 사진 공모전</h3>
+                            <p class="vs_com">내가 찍은 금정구 인생샷</p>
+                            <a href="" class="more">VIEW MORE</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./data/mainslide2.jpg" alt="슬라이드2" class="pic">
+                        <div class="tit_box">
+                            <h3 class="vs_tit">도시가 품은 쉼, 회동수원지 소풍여행</h3>
+                            <p class="vs_com">금정의 아름다운 길, 생태가 살아 있는 회동수원지</p>
+                            <a href="" class="more">VIEW MORE</a>
+                        </div>
+                    </li>
+                </ul>
+            
+            <ul class="btn_box">
+                <li class="on"><button></button></li>
+                <li><button></button></li>
+            </ul>
+            </figure>
+            <ul class="ico_link">
+                <li>
+                    <a href="" class="item1">
+                        <span class="ico"></span>
+                        <span>위치</span>
+                    </a>
+                </li>                
+                <li><a href="" class="item2">
+                        <span class="ico"></span>
+                        <span>연락처</span>
+                    </a>
+                </li>
+            </ul>
+            <footer id="ft">
+                <ul class="fnb">
+                <p class="copyright">
+                    <li><a href="">위치</a></li>
+                    <li><a href="">연락처</a></li>
+                    <li><a href="">면책공고</a></li>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="" class="last">웹접근성</a></li>
+                </p>
+                </ul>
+                <p class="copyright">ⓒ 2019 GEUMJEONG-GU OFFICE. ALL RIGHTS RESERVED.</p>
+            </footer>
+        </section>
+</div>  
+    </div>
+</body>
+</html>
