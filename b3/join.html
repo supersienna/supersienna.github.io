@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="멘야오지상 마제소바 아부라소바 부산맛집">
+    <meta name="description" content="정성가득 마제소바 전문점 멘야오지상입니다.">
+    
+    <link rel="canonical" href=" ">
+    <link rel="shortcut icon" type="image/png" href="./images/fav16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/fav32.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./images/fav128.png">
+    <link rel="shortcut icon" type="image/png" sizes="256x256" href="./images/fav256.png">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="멘야오지상">
+    <meta property="og:url" content="메인페이지의 url을 지정">
+    <meta property="og:site_name" content="멘야오지상">
+    <meta property="og:description" content="마제소바 전문점 멘야오지상 홈페이지 입니다.">
+    <meta property="og:image" href="./images/fav64.png">
+    <meta property="og:updated_time" href="웹문서의최종변경시간">
+     
+    <link rel="stylesheet" href="./css/join.css">  
+    <title>멘야오지상</title>
+    <script>
+	function fnc1(){
+		alert("미리보기 준비중입니다");
+	}
+	function fnc2(){
+		alert("사용 가능한 아이디입니다.");
+	}
+	</script>
+</head>
+<body>
+        <nav id="tnb">
+        <div class="tnb_wrap">
+            <ul class="top">
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="join.html">회원가입</a></li>
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="gnb">
+        <div class="gnb_wrap">
+            <a href="index.html" class="logo"><img src="./images/mainlogo.jpg" alt="logo"></a>
+            <ul class="main">
+                <li>
+                    <a href="" class="dp1">ABOUT US</a> 
+                    <ul class="sub">
+                       <li><a href="sub2.html">STORY</a></li>
+                       <li><a href="map.html">오시는길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="dp1">MENU</a> 
+                    <ul class="sub">
+                        <li><a href="sub1.html">FOOD</a></li>
+                        <li><a href="#drink">DRINK</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="dp1">FRANCHISE</a> 
+                    <ul class="sub">
+                       <li><a href="fran1.html">성공전략</a></li>
+                       <li><a href="fran2.html">가맹안내</a></li>
+                       <li><a href="fran3.html">가맹비용</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="dp1">NEWS</a> 
+                    <ul class="sub">
+                       <li><a href="notice.html">공지사항</a></li>
+                       <li><a href="event.html">EVENT</a></li>
+                       <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>       
+    </nav>
+    <div class="wrap">
+        <section class="con1">
+            <img src="./images/join.png" alt="event">
+        </section>
+        <section class="con2">
+            <h2 class="con_tit">Join</h2>
+                <form name="frm1" action="join.php" method="post" autocomplete="on">
+                <fieldset>
+                <legend>기본 정보</legend>
+                <div class="info">
+                    <label for="m_name">* 이름 : </label>
+                    <input type="text" name="m_name" id="m_name" placeholder="이름 입력" title="이름을 10글자 이내로 입력해주세요" size="20" maxlength="10" autofocus required ><br><br>
+                    <label for="m_id">* 아이디 : </label>
+                    <input type="text" name="m_id" id="m_id" placeholder="아이디 입력" size="20" maxlength="10" title="아이디를 10자 이내로 입력해주세요" required>
+                    <input type="button" value="중복확인" onclick="fnc2()"><br><br>
+                    <label for="m_pw">* 비밀번호 : </label>
+                    <input type="password" name="m_pw" id="m_pw" placeholder="비밀번호 입력" size="20" maxlength="10" title="비밀번호를 10자로 입력해주세요(특수문자입력불가)"  pattern="[A-Za-z0-9]{10}" required><br><br>
+                    <label for="m_pw">* 비밀번호 확인 : </label>
+                    <input type="password" name="m_pw2" id="m_pw2" placeholder="비밀번호 확인 입력" size="20" maxlength="10" title="비밀번호를 10자로 입력해주세요(특수문자입력불가)"  pattern="[A-Za-z0-9]{10}" required><br><br>
+                    <label for="email1">* 이메일 : </label>
+                    <input type="text" name="email1" id="email1" placeholder="이메일 입력" pattern="^[a-zA-Z0-9]+@[a-zA-Z0-9]+$" required>
+                    @
+                    <select id="email2">
+                        <option value="">선택안함</option>
+                        <option value="naver.com">네이버</option>
+                        <option value="daum.net">다음</option>
+                        <option value="google.com">구글</option>
+                    </select><br><br>
+                    <label>성별 :</label>
+                    <input type="radio" name="rdo" id="ra1" checked>
+                    <label for="ra1">여성</label>
+                    <input type="radio" name="rdo" id="ra2">
+                    <label for="ra2">남성</label><br><br>
+                    <label for="birth">생일 :</label>
+                    <input type="date"><br><br>
+                    <label>선호하는 메뉴를 선택해주세요.</label><br><br>
+                    <input type="checkbox" id="ck1" >
+                    <label for="ck1">마제소바</label>
+                    <input type="checkbox" id="ck2" >
+                    <label for="ck2">아부라소바</label>
+                    <input type="checkbox" id="ck3" >
+                    <label for="ck3">카레소바</label>
+                    <input type="checkbox" id="ck4" >
+                    <label for="ck4">호르몬동</label><br><br>
+                    <p id="need">* 는 필수항목 입니다.</p>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>추가 정보</legend>
+                <div class="info2">
+                    <label for="web">자주 찾는 지점 : </label>
+                    <input list="browsers" id="web">
+                    <datalist id="browsers">
+                        <option value="중동 해운대점">
+                        <option value="서면 삼정타워점">
+                        <option value="방문한 적 없음">
+                    </datalist><br><br>
+                    <label for="memo">멘야오지상에게 하고 싶은 말 : </label> <br><br>
+                    <textarea rows="6" cols="52"></textarea>
+                </div>
+            </fieldset><br>
+            <div class="btn_box">
+                <input type="submit" value="회원가입">
+                <input type="reset" value="취소">
+                <input type="button" value="미리보기" onclick="fnc1()">
+            </div>	
+        </form>
+        </section>
+    </div>
+    <footer class="ft">
+       <div class="ft_wrap">
+            <div class="ft_logo"><img src="./images/ft-logo.png" alt="로고"></div>
+            <div class="copyright">
+            <p>부산시 해운대구 해운대해변로359번길 27 🍜 ©Menya_Ojisan All rights reserved</p>
+            </div>
+            <ul class="sns_box">
+                <li class="item1"><a href="https://www.instagram.com/menya_ojisan_official/"><img src="./images/icon1.png" alt="instagram"></a></li>
+                <li class="item2"><a href="#"><img src="./images/icon2.png" alt="facebook"></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

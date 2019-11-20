@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+*{margin: 0;padding: 0;}
+body, html { width: 100%; overflow-x:hidden; font-family: "malgun", sans-serif; }
+ul { list-style: none;}
+a { text-decoration: none; }
+button, input, label { outline: 0; border: 0; }
+
+#tnb { background-color:#333; height:40px; width:100%; }
+.tnb_wrap { width:1200px; margin:0 auto; height: 40px; }
+.top { clear: both; float: right; height:40px; }
+.top li { float:left; }
+.top li a { border: 10px; display: block; float: left; line-height: 40px; padding:0px 0px 0px 20px; color:#fff; font-size: 14px; }
+
+#gnb { clear:both; height:100px; }
+.gnb_wrap { width: 1200px; margin:0 auto; height: 100px; }
+.logo { display: block; float: left; width:268px; height:100px; }
+.main { float:right; }
+#gnb li { float: left; position:relative; }
+#gnb li a {display: block; text-align: center; line-height: 100px; padding:0px 0px 0px 72px; color:black; font-size: 18px; font-weight: bold; }
+#gnb li a.dp1:after {content:""; width:200px; height:3px; position:absolute; top:0; left:0; background:transparent; }
+#gnb li a.dp1:hover::after { background:#E50012; }
+#gnb li a:hover { color:#E50012; }
+#gnb .sub { width:200px; height:0px; background-color:#fff; opacity: 0; transition:0.6s; transition-timing-function: ease-out; visibility: hidden; overflow:hidden; position:absolute; top:90px; left:0px; border-bottom:3px solid transparent; }
+#gnb li:hover .sub { height:180px; visibility:visible; opacity: 0.8; border-bottom:3px solid #E50012;} 
+#gnb li .sub li { clear: both; }
+#gnb li .sub a { text-align:center; font-size:16px; line-height:50px; }
+.mainvs { width: 100%; height: 640px; background-image: url("../images/mainimg.jpg"); }
+.mainvs_tit { clear: both; width: 1200px; text-align: left; margin: 0 auto; padding: 60px; color: #eee; font-size: 30px; font-weight: 400; }
+
+#frm1 { width: 600px; height: 50px; margin:320px auto; background-color:rgba(0,0,0,0.6); }
+#keyword { display: block; height: 50px; width:550px; background-color:transparent; font-size:18px; text-indent:24px; margin: 0px; float: left; opacity: 0.9; transition: 0.5s; }
+#search { display: block; width: 40px; height: 40px; float: right; margin: 5px;
+        background-color: transparent; background-image:url("../images/searchwhite.png"); text-indent:-9999px;
+        background-size: 40px 40px; background-position:center center; 
+        background-repeat:no-repeat; opacity:0.8; transition:0.5s; }
+#keyword:focus { opacity:1; background-color: #eee; }
+#keyword:focus ~ #search { opacity:1; }
+#frm1_k { display: block; text-align: center; color: #fff; padding:50px; font-size: 18px; text-shadow:2px 2px 3px #000; }
+
+.wrap { width: 1200px; height: 300px; margin: 0 auto; margin-top: 80px; }
+.con1_tit { width: 1072px; text-align: left; font-size: 38px; color: #333; } 
+.para {float: left; width: 1072px; font-size: 16px; color: #333; padding-top: 30px; line-height: 28px; }
+.con1 img {width: 128px; height: 128px;}
+
+.con2 {  border-top: 3px solid #b9332e; width: 1920px; height: 560px; background-color: #eee; margin: 0 auto; margin-top: 100px; }
+.con2_tit { text-align: center; line-height: 120px; font-size: 38px; color: #333; font-weight: 500; }
+.thum_lst { width: 1120px; margin: 0 auto;}
+.thum_lst li { float: left; margin-left: 20px; position: relative; }
+.thum_lst li a { color: #eee; display: block; width: 340px; height: 340px; overflow: hidden; border:3px solid transparent; transition:0.8s; transition-delay:0.1s; background-color: #333; }
+.thum_lst li a:hover { border:3px solid #b9332e; background-color: #fff; color: #b9332e; }
+.lst_tit { padding-left: 10px; font-size: 25px; }
+.lst_com { padding: 10px; }
+
+.ft {height: 100px;  background-color: #333; text-align: center; margin-top: 120px;}
+.ft_wrap{width: 1200px; height: 100px; margin: 0 auto;}
+.ft_logo {width: 200px; height: 64px; float: left; margin-top: 18px;}
+.copyright { width: 800px; line-height: 100px; float: left; display: block; float: left; text-align: center; font-size:16px; color: #eee; }
+.sns_box { width: 200px; height: 60px; float: right; margin-top: 20px;}
+.sns_box li { float:right; padding: 12px; }
