@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab-notice</title>
+    <style>
+    /* reset style */
+    * {margin: 0;padding: 0;}
+    body, html {width: 100%; font-family: "돋움", Dotum, sans-serif;}
+    ul {list-style: none;}
+    a {text-decoration: none;}
+    img {border: 0;}
+        
+    .content {height: 200px; margin: 50px;}
+    .con_box {clear: both;}
+    .con_box li {float: left;}
+    .con_box li .item1 nt { width: 500px;}
+    .con_box li .item1 nt .nt_tit {width: 120px; height: 40px; line-height: 40; margin: 0 auto;}
+    .con_box li .item1 nt .nt_hd {float: left; text-align: center;}
+
+    #notice {display: none;}
+    #gallery {display: none;}
+    #ra1:checked ~ #notice {display: block;}
+    #ra1:checked ~ .nt_hd .lb1 {background: #e8441d;}
+    #ra2:checked ~ #gallery {display: block;}
+    #ra2:checked ~ .nt_hd .lb2 {background: #e8441d;}
+    #ra1.rdo, #ra2.rdo { display: none; }
+
+    .con_box .nt_hd .lb1, .lb2 { float: left ; display: block; width: 100px; height: 40px; line-height: 40px; text-align: center; background: #999; color: #fff; font-weight: bold; border-top-left-radius: 14px; border-top-right-radius: 14px; }
+    
+    .item1.nt { border: 3px }
+    .tb {display: table; width: 480px; clear: both; margin: 0 auto; border-top: 3px solid #e8441d; padding-top: 20px}
+    .tr {display: table-row;}
+    .td, .th {display: table-cell; }    
+    .tb td, .tb th {border-bottom: 1px solid #ccc; line-height:20px; color:#333; }
+    .tb .col1 {width: 60px; text-align: center; font-size: 12px;}
+    .tb .col3 {width: 100px; text-align: center; font-size: 12px;}
+    .tb .col2 {width: 340px; padding-left: 10px; font-size: 12px;}
+    .tb .col2 a { width: 300px; display: block; padding: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #333; }
+    .tb .col2 a:hover { color: #e8441d; font-weight: bold; }
+    .gal {clear: both; width: 480px; margin: 0 auto;}
+    .gal li { float: left; margin: 4px;}
+    .gal li img { width: 150px; height: 150px; float: left; border: 1px solid #ccc;}
+    .gal li img:hover { width: 150px; height: 150px; float: left; border: 1px solid #e8441d;}
+    </style>
+</head>
+<body>
+   <main class="content">
+            <ul class="con_box">
+                <li class="item1 nt">
+                    <div class="nt_wrap">
+                        <input type="radio" name="rdo_item" class="rdo" id="ra1" checked>
+                        <input type="radio" name="rdo_item" class="rdo" id="ra2">
+                        <div class="nt_hd">
+                            <label for="ra1" class="lb1">Notice</label>
+                            <label for="ra2" class="lb2">Gallery</label>
+                        </div>
+                        <div class="item_box" id="notice">
+                            <table class="tb">
+                                <thead>
+                                    <tr>
+                                        <th class="col1">번호</th>
+                                        <th class="col2">제목</th>
+                                        <th class="col3">등록일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="col1">1</td>
+                                        <td class="col2">
+                                            <a href="#pop">킨더의 발렌타인 이벤트</a>
+                                        </td>
+                                        <td class="col3">2019-02-12</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">2</td>
+                                        <td class="col2">
+                                            <a href="#">킨더의 신제품을 만나보세요!</a>
+                                        </td>
+                                        <td class="col3">2019-02-11</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">3</td>
+                                        <td class="col2">
+                                            <a href="#">킨더 초콜릿 신제품 출시에 대한 영상광고 크리에이터 모집</a>
+                                        </td>
+                                        <td class="col3">2019-02-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">4</td>
+                                        <td class="col2">
+                                            <a href="#">킨더 초콜릿 베스트 후기 이벤트</a>
+                                        </td>
+                                        <td class="col3">2019-02-09</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="item_box" id="gallery">
+                            <ul class="gal">
+                                <li class="item1"><a href="#"><img src="./choco1.png" alt="갤러리1"></a></li>
+                                <li class="item2"><a href="#"><img src="./choco2.png" alt="갤러리2"></a></li>
+                                <li class="item3"><a href="#"><img src="./choco3.png" alt="갤러리3"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </main>   
+</body>
+</html>

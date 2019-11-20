@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+.mainvs { width: 100%; height: 500px; background-image: url("../images/img2.jpg"); }
+.row { clear: both; }
+.row::after { content:""; display: table; clear: both; }
+.breadcrumb {float: right; margin-right: 340px; margin-top: 30px; }
+.breadcrumb span, a { display: block; text-decoration: none; color: #333; float: left; font-size: 18px; }
+.wrap { width: 1200px; margin: 0 auto; margin-top: 80px; }
+.wrap h1 {line-height: 140px; text-align: center; font-size: 48px;}
+.con_tit {text-align: left; font-size: 42px; } 
+.para {width: 1200px; font-size: 16px; padding-top: 50px; line-height: 24px;}
+.con2 {margin-top:100px;}
+.con2 img {width: 200px; height: 100px; float: left;}
+.con2_txt { width: 480px; height: 150px; float: left; padding: 12px; margin-left: 140px;}

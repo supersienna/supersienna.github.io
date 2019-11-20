@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .wrap { width: 200px;}
+        .accordion {
+            background-color: #e8441d;
+            color: #fff;
+            cursor: pointer;
+            padding: 18px;
+            width: 200px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.5s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #333;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h2>PRODUCTS</h2>
+        <button class="accordion">Product 1</button>
+        <div class="panel">
+            <p>the best for kids, kinder chocolate</p>
+        </div>
+        <button class="accordion">Product 2</button>
+        <div class="panel">
+            <p>the best for kids, kinder chocolate</p>
+        </div>
+        <button class="accordion">Product 3</button>
+        <div class="panel">
+            <p>the best for kids, kinder chocolate</p>
+        </div>
+    </div>
+   
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
